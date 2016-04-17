@@ -36,7 +36,7 @@ In the above example :
 1-9 requires only 1 jump. 
 So in the above example you need to return [2,3,4,5,6,8,9] and copy 6 in jumps_count
 
-Input :
+Input :int
 A 2D Array (passed as Single pointer,First element Address) ,N (number of Cols), M(number of rows),
 jumps_count (Pointer to an Integer)
 Output :
@@ -65,6 +65,17 @@ Note : There will be only One Maximum Jumps path .[If there are multiple ,Return
 #include <stdlib.h>
 #include <stdio.h>
 
-int * pillars_max_jumps(int *blocks, int n, int m,int *jumps_count){
-	return NULL;
+int * pillars_max_jumps(int *blocks, int n, int m, int *jumps_count){
+	if (m < 0 || n < 0)
+		return NULL;
+	jumps_count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (a[i][j] == a[i + 1][j])
+				i++;
+
+		}
+	}
 }
